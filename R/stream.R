@@ -40,7 +40,7 @@ mongo_stream_in <- function(cur, handler = NULL, pagesize = 1000, verbose = TRUE
     }
   } else {
     function(x){
-      handler(post_process(x))
+      handler(x)
       count <<- count + length(x)
     }
   }
